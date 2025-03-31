@@ -11,10 +11,6 @@
             background-color: #fef5e7;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             overflow: hidden;
         }
         .container {
@@ -25,6 +21,7 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             position: relative;
             z-index: 10;
+            margin-top: 10vh;
         }
         h1 {
             font-size: 32px;
@@ -46,7 +43,19 @@
             height: 40px;
             background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6d/Nazar_Boncuk.svg');
             background-size: cover;
-            z-index: 1;
+            z-index: 999;
+            animation: float 5s infinite alternate ease-in-out;
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-20px); }
+        }
+        #photo {
+            width: 200px;
+            height: auto;
+            border-radius: 15px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
     </style>
 </head>
@@ -67,6 +76,7 @@
     <div class="container">
         <h1>✨ Büşra & Mert Engagement ✨</h1>
         <p>5 Nisan 2025 Cumartesi saat 18.30'da başlayacak nişanımıza sabırsızlıkla bekliyoruz!</p>
+        <img id="photo" src="busra_mert_photo.jpg" alt="Büşra & Mert">
         <div id="countdown"></div>
         <div class="footer">Sevgi ve mutlulukla dolu bir gelecek için... ❤️</div>
     </div>
